@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: dimgrey">
+<div class="container">
+    <div class="col-lg-3 col-md-3 col-sm-0"></div>
+    <div class="col-lg-6 col-md-6 col-sm-12" style="background-color: white;">
+<div style="height: 80px; background-color: #85b9e4; margin-top: 5px">
+    <div class="cont_titulo_cont cont_todo_list_top">
+        <h3>THINGS TODO</h3>
+    </div>
+    </div>
+    <br>
+        <br>
+
+        <div id="newEventHolder">
+            <span><i class="fa fa-plus"></i> Add New TASK</span>
+        </div>
+        <div class="text-center" id="newTodoForm" style="display: none; border: dotted; border-color: #3289d2;border-radius: 4px;">
+      <form action="javascript:void(0)" onsubmit="addNewTodo()">
+        <input type="text" required="required" class="form-control input pass" id="new_todo_input" placeholder="enter todo task"/>
+          <button type="submit" id="todo_button" class="btn btn-primary">Add</button>
+          <button type="button" id="cancel" class="btn btn" onclick="cancelFunc()">cancel</button>
+      </form>
+    </div>
+    <br>
+    <div id="disp"></div>
+    <br><br>
+    <br>
+
+</div>
+<br>
+</div>
+<script type="text/javascript">
+    var newEventHolder = document.getElementById("newEventHolder");
+    var eventForm = document.getElementById("newTodoForm");
+    newEventHolder.onclick= function() {
+        eventForm.style.display='block';
+    }
+
+
+</script>
+</body>
+
+<script src="interface.js" type="text/javascript"></script>
+<script src="function.js" type="text/javascript"></script>
+</html>
